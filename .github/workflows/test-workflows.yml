@@ -40,12 +40,12 @@ jobs:
           DEBIAN_FRONTEND="noninteractive" sudo apt-get install -y graphicsmagick
         shell: bash
 
-      - name: pnpm install and build
-        working-directory: n8n
-        run: |
-          pnpm install --frozen-lockfile
-          pnpm build:backend
-        shell: bash
+      # - name: pnpm install and build
+      #   working-directory: n8n
+      #   run: |
+      #     pnpm install --frozen-lockfile
+      #     pnpm build:backend
+      #   shell: bash
 
       - name: Import credentials
         run: n8n/packages/cli/bin/n8n import:credentials --input=test-workflows/credentials.json
