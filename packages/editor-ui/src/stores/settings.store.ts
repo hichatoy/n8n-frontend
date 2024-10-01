@@ -20,6 +20,7 @@ import { makeRestApiRequest } from '@/utils/apiUtils';
 import { useTitleChange } from '@/composables/useTitleChange';
 import { useToast } from '@/composables/useToast';
 import { i18n } from '@/plugins/i18n';
+import { defaultSettings } from '@/__tests__/defaults';
 
 export const useSettingsStore = defineStore(STORES.SETTINGS, () => {
 	const initialized = ref(false);
@@ -220,7 +221,7 @@ export const useSettingsStore = defineStore(STORES.SETTINGS, () => {
 
 	const getSettings = async () => {
 		const rootStore = useRootStore();
-		const fetchedSettings = await settingsApi.getSettings(rootStore.restApiContext);
+		const fetchedSettings = defaultSettings; // await settingsApi.getSettings(rootStore.restApiContext);
 		setSettings(fetchedSettings);
 		settings.value.communityNodesEnabled = fetchedSettings.communityNodesEnabled;
 		setAllowedModules(fetchedSettings.allowedModules);

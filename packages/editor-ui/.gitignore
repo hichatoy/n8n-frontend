@@ -25,3 +25,7 @@ yarn-error.log*
 
 # Auto-generated files
 src/components.d.ts
+
+
+.firebase
+.log

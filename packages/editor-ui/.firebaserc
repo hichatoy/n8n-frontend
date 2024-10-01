@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "hiliosai"
+  },
+  "targets": {
+    "hiliosai": {
+      "hosting": {
+        "workflow-ui": [
+          "hiliosai-mgmt-workflow-ui"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

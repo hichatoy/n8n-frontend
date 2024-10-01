@@ -1,0 +1,33 @@
+{
+	"hosting": {
+		"public": "./dist",
+		"target": "workflow-ui",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+		"rewrites": [
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		],
+		"headers": [
+			{
+				"source": "**/*.@(eot|otf|ttf|ttc|woff|js|font.css|remoteEntry.js)",
+				"headers": [
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "https://hiliosai-mgmt.web.app"
+					},
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "https://management.hilios.ai"
+					}
+				]
+			}
+		],
+		"cleanUrls": true,
+		"trailingSlash": false,
+		"frameworksBackend": {
+			"region": "europe-west1"
+		}
+	}
+}

@@ -6,6 +6,9 @@
 		"clean": {
 			"cache": false
 		},
+		"build:backend": {
+			"dependsOn": ["n8n#build"]
+		},
 		"build:frontend": {
 			"dependsOn": ["n8n-editor-ui#build"]
 		},
